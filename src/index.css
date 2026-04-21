@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-darker: #05070a;
+  --bg-section: #0a0d14;
+  --bg-item: #131924;
+  --border-dim: #212a3d;
+  --gold: #d4af37;
+  --gold-vibrant: #f3cf65;
+  --text-dim: #64748b;
+  --text-mid: #94a3b8;
+}
+
+body {
+  background: radial-gradient(circle at center, #0a0d14 0%, #050505 100%);
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  selection-background-color: var(--gold);
+  selection-color: black;
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px var(--gold-vibrant);
+}
+
+.text-glow {
+  text-shadow: 0 0 8px rgba(243, 207, 101, 0.4);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+.font-tech {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+.glass-immersive {
+  background: var(--bg-section);
+  border: 1px solid var(--border-dim);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
